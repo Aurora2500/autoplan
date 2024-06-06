@@ -4,9 +4,11 @@ workspace "autoplan"
 
 project "autoplan"
 	language "C++"
+	cppdialect "C++17"
 	targetdir "bin/%{cfg.buildcfg}"
 
 	files { "src/**.hpp", "src/**.cpp" }
+	includedirs { "src" }
 
 	filter "platforms:Static"
 		kind "StaticLib"
